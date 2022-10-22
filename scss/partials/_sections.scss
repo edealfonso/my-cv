@@ -1,16 +1,15 @@
 // s0 - intro
 
 .intro {
-    padding: 3rem 4rem 1.5rem 4rem;
-
-    font-size: 1.2em;
-    font-weight: 300;
+    padding-bottom: 0;
+    font-size: 1.1em;
+    // font-weight: 300;
 }
 
 // s1 - technologies
 
 .techs {
-    padding: 3rem 4rem 0 4rem;
+    padding-bottom: 0;
 
     &__wrap {
         display: grid;
@@ -53,25 +52,36 @@
     }
 
     &__focus {
-        margin-top: 1.5rem;
-        color: $pink;
+        color: $pinkdark;
+        font-family: $f;
         font-weight: 500;
-        font-size: 0.92em;
-        width: fit-content;
-        margin-left: auto;
+        font-size: 14px;
         letter-spacing: -0.02em;
+
+        width: fit-content;
         background: radial-gradient(
             ellipse farthest-corner at center center,
             $yello 0%,
             rgba(255, 255, 255, 0) 100%
         );
         padding: 1rem;
+        margin: -1rem;
+
+        // background case
+        padding: 0.5rem;
+        border-radius: 11px;
 
         &::before {
             content: '*';
             vertical-align: super;
             font-size: 0.6em;
         }
+    }
+
+    .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -88,33 +98,35 @@
 // s3 - latest works
 
 .latest {
-    display: flex;
-    flex-direction: column;
-
     &__wrap {
-        flex-grow: 1;
-
+        padding: 0 !important;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 3rem;
-
-        // margin-bottom: 1.5rem;
-
-        img {
-            height: 8vw;
-            width: 100%;
-            object-fit: cover;
-            border: 1px solid black;
-            margin-bottom: 1rem;
-        }
+        gap: 1.5rem;
 
         a {
             text-decoration: none;
             hyphens: auto;
-        }
-        p {
-            font-size: 0.8em;
-            padding-bottom: 0;
+
+            img {
+                height: 8.8vw;
+                width: 100%;
+                object-fit: cover;
+                border: 0.5px solid $black;
+                border-radius: $radius;
+                margin-bottom: 0.7rem;
+            }
+
+            h5,
+            p {
+                padding-left: 9px;
+                padding-right: 9px;
+                font-size: 0.8em;
+            }
+
+            p {
+                padding-bottom: 0;
+            }
         }
     }
 }
@@ -123,13 +135,15 @@
 
 .timeline {
     padding: 0;
-    margin-top: calc(#{$notetop} - 7rem);
+    margin-top: calc(#{$notetop} - 4rem);
 
     .marked {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         padding: 0;
-        margin-left: calc(19vw); // timeline goes to the right
+        // margin-left: calc(19vw); // timeline goes to the right
+        margin-left: 8.5rem; // timeline goes to the right
+        box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.1);
     }
 
     .section-title {
@@ -141,8 +155,8 @@
     img,
     svg {
         display: block;
-        margin: 1.5rem 0;
-        padding-left: 6rem; // svg to right
+        margin: 3rem 0;
+        padding-left: 3rem; // svg to right
     }
 
     position: relative;
@@ -158,10 +172,10 @@
     &__notes {
         position: absolute;
         left: 1rem;
-        width: calc(38vw - 10rem);
+        width: calc(#{$colleft} - 4rem);
         top: calc(-#{$notetop});
         bottom: calc(-#{$notebottom});
-        margin-left: 4rem;
+        margin-left: 3rem;
 
         padding: 0 0 4rem 0 !important; // remove default lateral padding + bottom space
 
@@ -171,14 +185,16 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
             height: 100%;
-            padding-left: 9px;
-            padding-right: 9px;
         }
 
         &__lang {
             li {
+                padding: 0;
+            }
+        }
+        &__jobs {
+            li:last-of-type {
                 padding: 0;
             }
         }

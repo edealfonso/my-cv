@@ -15,7 +15,8 @@ body {
         font-size: 1.4rem;
     }
 
-    // background color
+    // colors
+    color: $black;
     background-color: white;
 
     // font rendering and aliasing
@@ -76,6 +77,33 @@ a {
     color: inherit;
 }
 
+// styling utils
+
+.code {
+    font-family: $fmono;
+    font-weight: 300;
+    font-size: 13px;
+
+    background: $code-bg;
+    border: 0.5px solid rgb(184, 184, 184);
+    border-radius: $radius;
+    box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.1);
+
+    padding: 7px 10px;
+}
+
+@mixin marked {
+    background-color: $marked-bg;
+    padding: 7px 10px;
+    border-radius: $radius;
+    border: 0.5px solid $marked;
+
+    // box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.1);
+}
+.marked {
+    @include marked;
+}
+
 // sections and general Spacing
 
 section {
@@ -89,39 +117,38 @@ section {
 
 .section-container {
     display: grid;
-    grid-template-columns: 38vw 1fr;
+    grid-template-columns: $colleft 1fr;
 }
 
 .section-title {
     font-family: $fmono;
-    font-weight: 400;
-    font-size: 21px;
+    font-weight: 300;
+    font-size: 17px;
     letter-spacing: 0.01em;
+    color: $marked;
+    padding-bottom: 0;
+
+    & > h2 {
+        font-family: $fmono;
+        font-weight: 300;
+        font-size: 17px;
+        letter-spacing: 0.01em;
+        color: $marked;
+        padding-bottom: 0;
+    }
 
     margin-bottom: 1.5em;
 
     @include marked;
 }
 
-// styling utils
-
-.code {
-    font-family: $fmono;
-    font-weight: 500;
-    font-size: 13px;
-
-    background: $code-bg;
-    border: 1px solid rgb(184, 184, 184);
-    border-radius: 2px;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-// special
-
 .last-part {
     z-index: -1;
     background: radial-gradient(ellipse at 25% 15%, $yello 0%, $pink 100%);
     width: 100%;
+}
+
+section.intro,
+section.lang {
+    padding-right: 0;
 }
