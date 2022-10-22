@@ -1,0 +1,24 @@
+.footer {
+    padding: 0;
+    height: calc(#{$notebottom} - 5rem); // take all available space
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: -2;
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1.5rem 3rem;
+        padding: 2.5rem 0;
+
+        font-size: 0.75em;
+
+        padding-left: calc(40% + 3rem); // align with other columns
+
+        li {
+            padding-bottom: 0;
+        }
+    }
+}

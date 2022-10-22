@@ -31,7 +31,7 @@ body {
 // general text styling
 
 h1 {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 2.5rem;
 }
 h2 {
@@ -89,41 +89,33 @@ section {
 
 .section-container {
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 38vw 1fr;
 }
 
 .section-title {
-    font-family: $ff;
-    font-family: 'Inconsolata', monospace;
+    font-family: $fmono;
+    font-weight: 400;
+    font-size: 21px;
+    letter-spacing: 0.01em;
 
-    font-weight: 600;
-    font-size: 24px;
-    text-transform: lowercase;
-    letter-spacing: 0.02em;
     margin-bottom: 1.5em;
 
     @include marked;
 }
 
 // styling utils
-.dotted {
-    text-decoration: underline 5px dotted $pink;
-}
+
 .code {
-    font-family: monospace;
-    font-family: 'Inconsolata', monospace;
+    font-family: $fmono;
+    font-weight: 500;
+    font-size: 13px;
 
-    font-size: 0.95em;
-
-    background: rgba(246, 244, 244, 0.9);
-    background: rgba(246, 244, 244, 1);
+    background: $code-bg;
     border: 1px solid rgb(184, 184, 184);
+    border-radius: 2px;
+
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.small {
-    font-size: 0.8em;
 }
 
 // special
@@ -131,4 +123,5 @@ section {
 .last-part {
     z-index: -1;
     background: radial-gradient(ellipse at 25% 15%, $yello 0%, $pink 100%);
+    width: 100%;
 }

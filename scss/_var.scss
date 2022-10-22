@@ -9,15 +9,21 @@ $orange: #ff5300;
 $green: #6eeba7;
 $gold: #a7a076;
 $pink: #faa5f0;
+$pinkdark: #ef82e2;
 $blue: #66a9ff;
 $yello: rgb(255, 252, 176);
 $lightgray: rgb(237, 237, 237);
 $gray: #878787;
 $greengray: #707070;
 
+// $marked-bg: rgb(224, 224, 224);
+$marked-bg: rgb(255, 255, 255);
+$code-bg: rgba(241, 241, 241, 0.7);
+$transparent-bg: rgba(255, 255, 255, 0);
+
 // Fonts
 $f: 'Work Sans', sans-serif;
-$ff: Times, sans-serif;
+$fmono: 'Inconsolata', monospace;
 
 // Font-sizes
 
@@ -25,6 +31,10 @@ $ff: Times, sans-serif;
 $pv: 3rem;
 $ph: 4rem;
 $pm: 1.5rem;
+
+// Spacing: note
+$notetop: 11.2rem;
+$notebottom: 25.2rem;
 
 // mixins
 @mixin ls {
@@ -38,11 +48,11 @@ $pm: 1.5rem;
     }
 }
 @mixin marked {
-    background-color: rgb(224, 224, 224);
+    background-color: $marked-bg;
     padding: 7px 10px;
-    border-radius: 9px;
+    border-radius: 2px;
     border: 1px solid black;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.15);
 }
 .marked {
     @include marked;

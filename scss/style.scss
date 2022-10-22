@@ -1,17 +1,11 @@
 // first
+
 @import 'reset';
 @import 'var';
 @import 'base';
 
 // partials
 
-@import 'header';
-@import 'footer';
-
-// sections
-@import 'sections/intro';
-@import 'sections/techs';
-@import 'sections/lang';
-@import 'sections/latest';
-@import 'sections/timeline';
-@import 'sections/notes';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/sections';
