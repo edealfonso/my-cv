@@ -1,0 +1,49 @@
+// Media queries
+$media-laptop: 'only screen and (max-width : 1440px)';
+$media-tablet: 'only screen and (max-width : 1024px)';
+$media-mobile: 'only screen and (max-width : 768px)';
+$media-mobile-sm: 'only screen and (max-width : 500px)';
+
+// Colors
+$orange: #ff5300;
+$green: #6eeba7;
+$gold: #a7a076;
+$pink: #faa5f0;
+$blue: #66a9ff;
+$yello: rgb(255, 252, 176);
+$lightgray: rgb(237, 237, 237);
+$gray: #878787;
+$greengray: #707070;
+
+// Fonts
+$f: 'Work Sans', sans-serif;
+$ff: Times, sans-serif;
+
+// Font-sizes
+
+// Spacing : default paddings
+$pv: 3rem;
+$ph: 4rem;
+$pm: 1.5rem;
+
+// mixins
+@mixin ls {
+    letter-spacing: 0.01em;
+}
+@mixin pad {
+    padding: $pv $ph;
+
+    @media #{$media-mobile} {
+        padding: $pm;
+    }
+}
+@mixin marked {
+    background-color: rgb(224, 224, 224);
+    padding: 7px 10px;
+    border-radius: 9px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+}
+.marked {
+    @include marked;
+}

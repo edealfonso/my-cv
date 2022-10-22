@@ -1,0 +1,170 @@
+/******************************************************************/
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+// /* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+// *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+//     all: unset;
+//     display: revert;
+// }
+
+// /* Preferred box-sizing value */
+// *,
+// *::before,
+// *::after {
+//     box-sizing: border-box;
+// }
+
+// /*
+// Remove list styles (bullets/numbers)
+// in case you use it with normalize.css
+// */
+// ol, ul {
+//     list-style: none;
+// }
+
+// /* For images to not be able to exceed their container */
+// img {
+//     max-width: 100%;
+// }
+
+/* Removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+// https://www.digitalocean.com/community/tutorials/css-minimal-css-reset
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// forms reset
+
+input {
+    border: none;
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: inherit;
+    padding: 0;
+    outline: inherit;
+    border: none;
+    outline-width: 0;
+}
+
+button,
+input[type='submit'] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+// headings reset
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit;
+}
+
+/****************************************************************
+/ https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit/
+/****************************************************************/
+
+body {
+    min-height: 100%;
+    min-height: -webkit-fill-available;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+/****************************************************************
+/ custom scrollbar
+/****************************************************************/
+
+body {
+    overflow: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #232323;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
+/****************************************************************
+/ reset is too much
+/****************************************************************/
+
+a,
+button {
+    cursor: pointer;
+}
+
+section {
+    display: block;
+}
