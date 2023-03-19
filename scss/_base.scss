@@ -113,27 +113,35 @@ section {
         padding-left: 9px;
         padding-right: 9px;
     }
+
+    @media #{$media-mobile} {
+        padding-top: 6rem!important;
+    }
 }
 
 .section-container {
     display: grid;
     grid-template-columns: $colleft 1fr;
+
+    @media #{$media-mobile} {
+        grid-template-columns: 1fr;
+    }
 }
 
 .section-title {
     font-family: $fmono;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 17px;
     letter-spacing: 0.01em;
     color: $marked;
     padding-bottom: 0;
 
     & > h2 {
-        font-family: $fmono;
-        font-weight: 300;
-        font-size: 17px;
-        letter-spacing: 0.01em;
-        color: $marked;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+        color: inherit;
         padding-bottom: 0;
     }
 
@@ -151,4 +159,8 @@ section {
 section.intro,
 section.lang {
     padding-right: 0;
+
+    @media #{$media-mobile} {
+        @include pad;
+    }
 }

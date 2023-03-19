@@ -10,7 +10,8 @@
         @include pad;
 
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr auto;
+        gap: 4rem;
         min-height: 18rem;
 
         position: relative;

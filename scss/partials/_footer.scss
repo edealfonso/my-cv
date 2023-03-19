@@ -20,5 +20,9 @@
         li {
             padding-bottom: 0;
         }
+
+        @media #{$media-mobile} {
+            padding-left: 2rem; // align with other columns
+        }
     }
 }
