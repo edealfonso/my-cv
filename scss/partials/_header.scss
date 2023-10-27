@@ -14,6 +14,10 @@
         gap: 4rem;
         min-height: 18rem;
 
+        @media #{$media-mobile} {
+            min-height: 12rem;
+        }
+
         position: relative;
         z-index: 1;
 

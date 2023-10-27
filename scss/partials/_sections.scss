@@ -2,7 +2,7 @@
 
 .intro {
     padding-bottom: 0;
-    font-size: 1.1em;
+    font-size: 1.4em;
     // font-weight: 300;
 }
 
@@ -140,26 +140,28 @@
             hyphens: auto;
 
             img {
-                height: 8.8vw;
-                min-height: 12rem;
+                // height: 8.8vw;
+                // min-height: 12rem;
                 width: 100%;
                 object-fit: cover;
                 border: 0.5px solid $black;
                 border-radius: $radius;
                 margin-bottom: 0.7rem;
+                aspect-ratio: 3 / 2;
 
-                @media #{$media-tablet} {
-                    min-height: 16vw;
-                }
-                @media #{$media-mobile} {
-                    min-height: 20vw;
-                }
-                @media only screen and (max-width : 680px) {
-                    min-height: 28vw;
-                }                         
-                @media #{$media-mobile-sm} {
-                    min-height: 48vw;
-                }
+
+                // @media #{$media-tablet} {
+                //     min-height: 16vw;
+                // }
+                // @media #{$media-mobile} {
+                //     min-height: 20vw;
+                // }
+                // @media only screen and (max-width : 680px) {
+                //     min-height: 28vw;
+                // }                         
+                // @media #{$media-mobile-sm} {
+                //     min-height: 48vw;
+                // }
 
             }
 
